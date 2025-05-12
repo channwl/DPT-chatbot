@@ -1,0 +1,126 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 기존: flex-start */
+    padding: 20px;
+    background-color: white;
+}
+
+.logo {
+    height: 50px;
+}
+
+.header-title {
+    font-size: 28px;
+    color: #800000;
+    font-weight: bold;
+}
+
+.intro-box {
+    display: flex;
+    gap: 20px;
+    margin: 30px 20px 10px 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#chat-history {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    background-color: #d0e6f7;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.message.bot {
+    background-color: #f0f0f0;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.message.bot.loading {
+    background-color: #fff8e1;
+}
+
+#chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#chat-form textarea {
+    flex: 1;
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    height: 50px;
+}
+
+#chat-form button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.loading-icon {
+    height: 30px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.bot-icon {
+    height: 35px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+
+.message.bot {
+    background-color: #f9f9f9;
+    border-left: 4px solid #980000;
+    color: #333;
+    align-self: flex-start;
+    margin-right: auto;
+    padding-left: 14px;
+    display: flex;                /* ✅ 아이콘과 텍스트 나란히 */
+    align-items: center;          /* ✅ 수직 정렬 */
+}
