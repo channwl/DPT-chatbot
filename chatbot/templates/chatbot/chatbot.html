@@ -111,9 +111,8 @@
         <!-- 헤더 -->
         <header>
             <div class="header-flex">
-              <img src="{% static 'chatbot/digb_logo.png' %}" alt="DIGB 로고" class="logo">
-              <div class="header-title">디지털경영전공 챗봇</div>
-            </div>
+                <img src="{% static 'chatbot/diget_logo.png' %}" alt="Diget.ai 로고" class="logo">
+              </div>
           </header>
         
         <!-- 인트로 영역 -->
@@ -178,8 +177,7 @@
     </div>
 
     <script>
-        const staticTigerIcon = "{% static 'chatbot/korea_tiger_icon.gif' %}";
-        
+        const staticTigerIcon = "{% static 'chatbot/da_icon.png' %}";
         function formatBotResponse(text) {
             let formatted = text
             .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
