@@ -96,3 +96,5 @@ STATICFILES_DIRS = [
 
 # 기본 기본 자동 필드
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ALLOWED_HOSTS = ['*']
