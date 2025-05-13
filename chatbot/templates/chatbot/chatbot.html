@@ -124,8 +124,6 @@
           </div>
         </div>
 
-        </div>
-
         <!-- 카테고리 박스 -->
 <div class="category-box">
     <div class="category-card">
@@ -324,7 +322,7 @@ function addBotMessage(category) {
 
                     const loadingMessage = document.createElement('div');
                     loadingMessage.classList.add('message', 'bot', 'loading');
-                    loadingMessage.innerHTML = <img src="${staticTigerIcon}" class="loading-icon"> 답변을 준비하고 있어요...;
+                    loadingMessage.innerHTML = `<img src="${staticTigerIcon}" class="loading-icon"> 답변을 준비하고 있어요...`;
                     chatHistory.appendChild(loadingMessage);
 
                     chatHistory.scrollTop = chatHistory.scrollHeight;
@@ -344,8 +342,7 @@ function addBotMessage(category) {
                         botMessage.classList.add('message', 'bot');
 
                         const formatted = formatBotResponse(data.response);
-                        botMessage.innerHTML = <img src="${staticTigerIcon}" class="bot-icon">  + formatted;
-
+                        botMessage.innerHTML = `<img src="${staticTigerIcon}" class="bot-icon">` + formatted;
                         chatHistory.appendChild(botMessage);
                         chatHistory.scrollTop = chatHistory.scrollHeight;
                     })  
