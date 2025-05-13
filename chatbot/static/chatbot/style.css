@@ -26,8 +26,9 @@ body {
 }
 
 .logo {
-    height: 90px;
+    height: 140px;
     margin-right: 0px;
+    display : block;
 }
 
 
