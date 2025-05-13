@@ -151,7 +151,7 @@ class RAGSystem:
 
         def retrieve_context(inputs: dict):
             vector_db = self.get_vector_db()
-            retriever = vector_db.as_retriever(search_kwargs={"k": 7})
+            retriever = vector_db.as_retriever(search_kwargs={"k": 5})
             return retriever.invoke(inputs["question"])
 
         return RunnableMap({
