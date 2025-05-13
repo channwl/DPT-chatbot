@@ -18,13 +18,14 @@ body {
 .header-flex {
     display: flex;
     align-items: center;
-    justify-content: center; /* 기존: flex-start */
+    justify-content: flex-start; /* 왼쪽 정렬 */
     padding: 20px;
-    background-color: white;
+    gap: 20px;
+    border-bottom: none; /* 선 제거 */
 }
 
 .logo {
-    height: 50px;
+    height: 70px;
 }
 
 .header-title {
@@ -33,15 +34,6 @@ body {
     font-weight: bold;
 }
 
-.intro-box {
-    display: flex;
-    gap: 20px;
-    margin: 30px 20px 10px 20px;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
 
 #chat-history {
     flex: 1;
@@ -100,27 +92,23 @@ body {
 
 .loading-icon {
     height: 30px;
-    width: auto;
     vertical-align: middle;
     margin-right: 5px;
 }
 
 .bot-icon {
-    height: 35px;
-    width: auto;
-    vertical-align: middle;
-    margin-right: 10px;
-    border-radius: 8px;
+        height: 35px;
+        width: auto;
+        vertical-align: middle;
+        margin-right: 6px;
+        border-radius: 4px;
 }
 
 
 .message.bot {
-    background-color: #f9f9f9;
-    border-left: 4px solid #980000;
+    background-color: #f2f2f2; /* 연한 회색 배경 */
+    border-left: 4px solid #800000;
     color: #333;
     align-self: flex-start;
     margin-right: auto;
-    padding-left: 14px;
-    display: flex;                /* ✅ 아이콘과 텍스트 나란히 */
-    align-items: center;          /* ✅ 수직 정렬 */
 }
