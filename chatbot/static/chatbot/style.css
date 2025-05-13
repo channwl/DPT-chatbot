@@ -23,26 +23,18 @@ body {
 
 .header-flex {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
     padding: 40px 0;
     border-bottom: 2px solid #800000;
-    text-align: left;
 }
 
-.logo {
-    height: 100px;
-    margin-right: 0;
-}
-
-.header-title-text {
-    font-size: 20px;
+.header-title {
+    font-size: 24px;
     color: #800000;
-    font-weight: 500;
-    line-height: 1.4;
+    font-weight: bold;
+    text-align: center;
 }
-
 
 #chat-history {
     flex: 1;
