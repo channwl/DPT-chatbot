@@ -16,8 +16,9 @@ body {
 }
 
 .intro-logo {
-    width: 140px;
-    height: auto;
+    width: 120px;
+    height: 120px;
+    object-fit:contain;
     margin-right: 20px;
 }
 
