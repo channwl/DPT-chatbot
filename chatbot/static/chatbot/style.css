@@ -5,6 +5,19 @@ body {
     padding: 0;
 }
 
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 로고 가운데 정렬 */
+    padding: 20px;
+    border-bottom: 2px solid #800000;
+}
+
+.header-logo {
+    width: 150px; /* 로고 크기 조정 */
+    height: auto;
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
