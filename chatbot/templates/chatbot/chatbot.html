@@ -273,7 +273,8 @@ function addBotMessage(category) {
             break;
             
         case "비교과":
-            content = <h3>🎯 학과 비교과 안내</h3>
+            content = '
+<h3>🎯 학과 비교과 안내</h3>
 <ul>
     <li><strong>신청기간:</strong> 매 학기 학기말까지</li>
     <li><strong>신청방법:</strong> eco005@korea.ac.kr 해당 메일로 서류 첨부하여 제출</li>
@@ -288,11 +289,12 @@ function addBotMessage(category) {
     <li><strong>문의사항:</strong> 044-860-1560 (디지털경영전공 사무실)</li>
 </ul>
 <p>📌 추가 학과 비교과, 교내 비교과에 대해선 질문해주세요!</p>
-`;
+';
             break;
 
         case "조직도":
-            content = <h3>🏢 소모임 조직도</h3>
+            content = '
+<h3>🏢 소모임 조직도</h3>
 <ul>
     <li><strong>MITP</strong>
         <p><strong>MITP</strong>는 "Make IT Possible"의 약자로, 우리가 이루고 싶은 꿈 "IT"을 찾고 실현하자는 의미를 지닙니다. 인생 목표를 확립하고 자신만의 사명을 세우기 위해 노력하는 학생들의 모임입니다.</p>
@@ -302,7 +304,7 @@ function addBotMessage(category) {
     </li>
 </ul>
 <p>📌 추가 설명 및 학생회 조직도를 알고 싶으면 질문해주세요!</p>
-`;
+';
             break;
 
         case "진로":
