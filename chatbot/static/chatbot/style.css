@@ -26,6 +26,7 @@ body {
 
 .logo {
     height: 70px;
+    margin-right: 16px;
 }
 
 .header-title {
@@ -97,7 +98,7 @@ body {
 }
 
 .bot-icon {
-        height: 35px;
+        height: 48px;
         width: auto;
         vertical-align: middle;
         margin-right: 6px;
