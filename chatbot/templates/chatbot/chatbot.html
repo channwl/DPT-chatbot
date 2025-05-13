@@ -6,6 +6,129 @@
     <title>디지털경영전공 챗봇</title>
     <link rel="stylesheet" href="{% static 'chatbot/style.css' %}">
     <style>
+    body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.intro-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 16px;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 0;
+    border-bottom: 2px solid #800000;
+    text-align: left;
+}
+
+.logo {
+    height: 100px;
+    margin-right: 0;
+}
+
+.header-title-text {
+    font-size: 20px;
+    color: #800000;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+#chat-history {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    background-color: #d0e6f7;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.message.bot {
+    background-color: #f0f0f0;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.message.bot.loading {
+    background-color: #fff8e1;
+}
+
+#chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#chat-form textarea {
+    flex: 1;
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    height: 50px;
+}
+
+#chat-form button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.loading-icon {
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.bot-icon {
+        height: 48px;
+        width: auto;
+        vertical-align: middle;
+        margin-right: 6px;
+        border-radius: 4px;
+}
+
+
+.message.bot {
+    background-color: #f2f2f2; /* 연한 회색 배경 */
+    border-left: 4px solid #800000;
+    color: #333;
+    align-self: flex-start;
+    margin-right: auto;
+}
     </style>
 </head>
 <body>
