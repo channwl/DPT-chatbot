@@ -219,7 +219,7 @@
 
             switch (category) {
                 case "학사일정":
-                    content = 
+                    content = '
     <h3>📅 학사일정 안내</h3>
 <p><strong>다가오는 주요 일정</strong></p>
 <ul style="margin-top: 4px; margin-bottom: 8px;">
@@ -228,6 +228,7 @@
   <li>📝 <strong>6/17~23</strong>: 기말고사</li>
   <li>🎉 <strong>6/23</strong>: 1학기 종강</li>
 </ul>
+';
 
 <p><strong>🎉 주요 행사</strong></p>
 <ul style="margin-top: 4px; margin-bottom: 8px;">
@@ -319,7 +320,7 @@
 
                     const loadingMessage = document.createElement('div');
                     loadingMessage.classList.add('message', 'bot', 'loading');
-                    loadingMessage.innerHTML = <img src="${staticTigerIcon}" class="loading-icon"> 답변을 준비하고 있어요...;
+                    loadingMessage.innerHTML = `<img src="${staticTigerIcon}" class="loading-icon"> 답변을 준비하고 있어요...`;
                     chatHistory.appendChild(loadingMessage);
 
                     chatHistory.scrollTop = chatHistory.scrollHeight;
@@ -339,8 +340,7 @@
                         botMessage.classList.add('message', 'bot');
 
                         const formatted = formatBotResponse(data.response);
-                        botMessage.innerHTML = <img src="${staticTigerIcon}" class="bot-icon">  + formatted;
-
+                        botMessage.innerHTML = `<img src="${staticTigerIcon}" class="bot-icon"> ` + formatted;
 
                         chatHistory.appendChild(botMessage);
                         chatHistory.scrollTop = chatHistory.scrollHeight;
@@ -359,6 +359,7 @@
                 }
             });
         });
+
     </script>
 </body>
 </html>
