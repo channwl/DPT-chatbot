@@ -246,15 +246,63 @@ function addBotMessage(category) {
             break;
 
         case "장학":
-            content = "💰 장학금은 성적장학, 국가장학, 교내·외 장학 등이 있으며,<br>신청 일정은 홈페이지를 통해 공지됩니다.";
-            break;
+            content = `
+<h3>💰 장학금 안내</h3>
+<ul>
+    <li><strong>미래로 장학금 (4월, 10월 신청)</strong>
+        <ul>
+            <li><strong>장학금:</strong> 수업료의 전액 혹은 일부</li>
+            <li><strong>지급기간:</strong> 매학기</li>
+            <li><strong>선발기준:</strong> 세종장학총괄위원회에서 장학금액을 소득분위에 따라 차등 결정</li>
+            <li><strong>지급요건:</strong> 국가장학금 신청</li>
+            <li><strong>선발부서:</strong> 학생생활지원팀</li>
+        </ul>
+    </li>
 
+    <li><strong>성적우수장학금</strong>
+        <ul>
+            <li><strong>장학금:</strong> 성적최우수(수업료 전액), 성적우수B(수업료의 50%), 성적우수C(수업료의 25%)</li>
+            <li><strong>지급기간:</strong> 매학기</li>
+            <li><strong>선발기준:</strong> 학과별 성적 우수자</li>
+            <li><strong>선발부서:</strong> 각 학과에서 우수자 선발</li>
+        </ul>
+    </li>
+</ul>
+<p>📌 추가 정보는 질문해주세요!</p>
+`;
+            break;
+            
         case "비교과":
-            content = "🎯 비교과 프로그램은 창의·인성·진로 개발을 위한 활동으로<br>KU챌린지를 통해 신청할 수 있습니다.";
+            content = <h3>🎯 학과 비교과 안내</h3>
+<ul>
+    <li><strong>신청기간:</strong> 매 학기 학기말까지</li>
+    <li><strong>신청방법:</strong> eco005@korea.ac.kr 해당 메일로 서류 첨부하여 제출</li>
+    <li><strong>신청 서류:</strong> 아래 첨부파일을 참고하여 해당 프로그램에 맞는 제출서류 확인</li>
+    <li><strong>유의사항:</strong>
+        <ul>
+            <li>가. 프로그램장학금 총 수혜금액은 등록금을 초과할 수 없음</li>
+            <li>나. 프로그램장학금은 2024년 2학기 경영정보학과(제1전공) 재학생 / 디지털경영전공(제1전공) 재학생만 신청 가능<br>
+            <small>(장학금의 성격에 따라 1학년 융합경영학부 신입생 / 디지털경영전공 이중전공생에게도 지급 가능함 - 사전연락 필요)</small></li>
+        </ul>
+    </li>
+    <li><strong>문의사항:</strong> 044-860-1560 (디지털경영전공 사무실)</li>
+</ul>
+<p>📌 추가 학과 비교과, 교내 비교과에 대해선 질문해주세요!</p>
+`;
             break;
 
         case "조직도":
-            content = "🏢 조직도는 학과 사무실, 행정팀, 학생회 등<br>학교 내 주요 부서들의 구성과 연락처를 제공합니다.";
+            content = <h3>🏢 소모임 조직도</h3>
+<ul>
+    <li><strong>MITP</strong>
+        <p><strong>MITP</strong>는 "Make IT Possible"의 약자로, 우리가 이루고 싶은 꿈 "IT"을 찾고 실현하자는 의미를 지닙니다. 인생 목표를 확립하고 자신만의 사명을 세우기 위해 노력하는 학생들의 모임입니다.</p>
+    </li>
+    <li><strong>FCKU</strong>
+        <p><strong>FCKU</strong>는 풋살이나 축구를 좋아하는 학우들이 모여 정기적으로 운동하고 땀 흘리며 선후배간 친목까지 도모하는, 디지털경영전공 내에서 아주 활발하게 운영되고 있는 소모임입니다.</p>
+    </li>
+</ul>
+<p>📌 추가 설명 및 학생회 조직도를 알고 싶으면 질문해주세요!</p>
+`;
             break;
 
         case "진로":
