@@ -22,13 +22,25 @@ body {
 }
 
 .header-flex {
-    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 0;
+    border-bottom: 2px solid #800000;
+    text-align: left;
 }
 
 .logo {
-    height: 140px;
-    margin-right: 0px;
-    display : block;
+    height: 100px;
+    margin-right: 0;
+}
+
+.header-title-text {
+    font-size: 20px;
+    color: #800000;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 
