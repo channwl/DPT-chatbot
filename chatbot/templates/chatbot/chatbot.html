@@ -6,129 +6,104 @@
     <title>디지털경영전공 챗봇</title>
     <link rel="stylesheet" href="{% static 'chatbot/style.css' %}">
     <style>
-    body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
-}
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-bottom: 2px solid #800000;
+        }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
+        .logo {
+            height: 50px;
+            margin-right: 12px;
+        }
 
-.intro-logo {
-    width: 100px;
-    height: auto;
-    margin-right: 16px;
-}
+        .header-title {
+            font-size: 24px;
+            color: #800000;
+            font-weight: bold;
+        }
 
-.header-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 0;
-    border-bottom: 2px solid #800000;
-    text-align: left;
-}
+        .intro-box {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.logo {
-    height: 100px;
-    margin-right: 0;
-}
+        .intro-box img {
+            width: 100px;
+            height: auto;
+        }
 
-.header-title-text {
-    font-size: 20px;
-    color: #800000;
-    font-weight: 500;
-    line-height: 1.4;
-}
+        .intro-text {
+            font-size: 16px;
+            line-height: 1.6;
+        }
 
+        .category-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin: 20px 0;
+        }
 
-#chat-history {
-    flex: 1;
-    overflow-y: auto;
-    padding: 20px;
-}
+        .category-card {
+            background-color: #f3f3f3;
+            border-radius: 12px;
+            padding: 20px;
+            width: 220px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.message {
-    margin-bottom: 15px;
-    padding: 10px;
-    border-radius: 15px;
-    max-width: 80%;
-    word-wrap: break-word;
-}
+        .category-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
 
-.message.user {
-    background-color: #d0e6f7;
-    align-self: flex-end;
-    margin-left: auto;
-}
+        .category-content button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #800000;
+            color: white;
+            cursor: pointer;
+        }
 
-.message.bot {
-    background-color: #f0f0f0;
-    align-self: flex-start;
-    margin-right: auto;
-}
+        .category-content button:hover {
+            background-color: #a52a2a;
+        }
 
-.message.bot.loading {
-    background-color: #fff8e1;
-}
+        .message.bot, .message.user {
+            white-space: pre-line !important;
+        }
 
-#chat-form {
-    display: flex;
-    padding: 10px;
-    border-top: 1px solid #ddd;
-}
-
-#chat-form textarea {
-    flex: 1;
-    resize: none;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-    height: 50px;
-}
-
-#chat-form button {
-    background-color: #800000;
-    color: white;
-    border: none;
-    padding: 0 20px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.loading-icon {
-    height: 30px;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.bot-icon {
-        height: 48px;
+        .bot-icon {
+        height: 35px;
         width: auto;
         vertical-align: middle;
         margin-right: 6px;
         border-radius: 4px;
-}
+    }
 
-
-.message.bot {
-    background-color: #f2f2f2; /* 연한 회색 배경 */
-    border-left: 4px solid #800000;
-    color: #333;
-    align-self: flex-start;
-    margin-right: auto;
-}
+    #chat-form button {
+        background-color: #800000;
+        color: white;
+        border: none;
+        padding: 0 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+    }
     </style>
 </head>
 <body>
