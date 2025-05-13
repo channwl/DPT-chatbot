@@ -1,3 +1,121 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    padding: 20px;
+    gap: 20px;
+    border-bottom: none; /* 선 제거 */
+}
+
+.logo {
+    height: 70px;
+}
+
+.header-title {
+    font-size: 28px;
+    color: #800000;
+    font-weight: bold;
+}
+
+
+#chat-history {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    background-color: #d0e6f7;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.message.bot {
+    background-color: #f0f0f0;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.message.bot.loading {
+    background-color: #fff8e1;
+}
+
+#chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#chat-form textarea {
+    flex: 1;
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    height: 50px;
+}
+
+#chat-form button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.loading-icon {
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.bot-icon {
+        height: 35px;
+        width: auto;
+        vertical-align: middle;
+        margin-right: 6px;
+        border-radius: 4px;
+}
+
+
+.message.bot {
+    background-color: #f2f2f2; /* 연한 회색 배경 */
+    border-left: 4px solid #800000;
+    color: #333;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+
+기존 CSS 코드랑
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="ko">
@@ -15,7 +133,7 @@
         }
 
         .logo {
-            height: 80px;
+            height: 50px;
             margin-right: 12px;
         }
 
@@ -111,8 +229,9 @@
         <!-- 헤더 -->
         <header>
             <div class="header-flex">
-                <img src="{% static 'chatbot/diget_logo.png' %}" alt="Diget.ai 로고" class="logo">
-              </div>
+              <img src="{% static 'chatbot/digb_logo.png' %}" alt="DIGB 로고" class="logo">
+              <div class="header-title">디지털경영전공 챗봇</div>
+            </div>
           </header>
         
         <!-- 인트로 영역 -->
@@ -177,7 +296,8 @@
     </div>
 
     <script>
-        const staticTigerIcon = "{% static 'chatbot/da_icon.png' %}";
+        const staticTigerIcon = "{% static 'chatbot/korea_tiger_icon.gif' %}";
+        
         function formatBotResponse(text) {
             let formatted = text
             .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
@@ -195,13 +315,13 @@
                         result += "<ul>";
                         insideList = true;
                     }
-                    result += `<li>${trimmed.slice(2).trim()}</li>`;
+                    result += <li>${trimmed.slice(2).trim()}</li>;
                 } else {
                     if (insideList) {
                         result += "</ul>";
                         insideList = false;
                     }
-                    result += `<p>${trimmed}</p>`;
+                    result += <p>${trimmed}</p>;
                 }
             }
 
@@ -218,7 +338,7 @@
 
             switch (category) {
                 case "학사일정":
-                    content = `
+                    content = 
     <h3>📅 학사일정 안내</h3>
 <p><strong>다가오는 주요 일정</strong></p>
 <ul style="margin-top: 4px; margin-bottom: 8px;">
@@ -244,10 +364,10 @@
 </ul>
 
 <p style="margin-top: 8px;">🔎 더 자세한 학사일정은 학사팀 공지사항 또는 학사일정 PDF에서 확인해주세요.</p>
-    `;
+    ;
                     break;
                     case "학적":
-                        content = `
+                        content = 
                         <h3>🧾 학적 · 졸업요건 (예: 25학번)</h3>
                         <ul>
                             <li><strong>이수학점</strong>: 총 130학점 이상</li>
@@ -266,7 +386,7 @@
                         </ul>
                         <p>📌 <strong>고려대 Portal</strong>에서 <strong>학적 변동</strong> (휴학·복학·전과 등)도 확인 및 신청 가능합니다.</p>
                         <p>📌 <strong>졸업 요건</strong>은 매년 변경될 수 있으니, <strong>학과 홈페이지</strong>를 통해 확인해주세요.</p>
-                        `;
+                        ;
                         break;
                     break;
                 case "장학":
@@ -279,7 +399,7 @@
                     content = "🏢 조직도는 학과 사무실, 행정팀, 학생회 등\n학교 내 주요 부서들의 구성과 연락처를 제공합니다.";
                     break;
                 case "진로":
-                    content = `
+                    content = 
                     <h3>🎓 디지털경영전공 진출 분야</h3>
                     <ul>
                         <li><strong>데이터 분석가</strong>: 기업 데이터 기반 의사결정 지원</li>
@@ -289,10 +409,10 @@
                         <li><strong>스타트업 창업가</strong>: 비즈니스모델 기획 및 실현</li>
                     </ul>
                     <p>📌 관련 과목이 궁금하다면 질문해주세요 !</p>
-        `            ;
+                    ;
                     break;
                 default:
-                    content = `🤖 ${category}에 대한 안내는 준비 중입니다.`;
+                    content = 🤖 ${category}에 대한 안내는 준비 중입니다.;
             }
 
             botMessage.innerHTML = content;
@@ -318,7 +438,7 @@
 
                     const loadingMessage = document.createElement('div');
                     loadingMessage.classList.add('message', 'bot', 'loading');
-                    loadingMessage.innerHTML = `<img src="${staticTigerIcon}" class="loading-icon"> 답변을 준비하고 있어요...`;
+                    loadingMessage.innerHTML = <img src="${staticTigerIcon}" class="loading-icon"> 답변을 준비하고 있어요...;
                     chatHistory.appendChild(loadingMessage);
 
                     chatHistory.scrollTop = chatHistory.scrollHeight;
@@ -338,7 +458,7 @@
                         botMessage.classList.add('message', 'bot');
 
                         const formatted = formatBotResponse(data.response);
-                        botMessage.innerHTML = `<img src="${staticTigerIcon}" class="bot-icon"> ` + formatted;
+                        botMessage.innerHTML = <img src="${staticTigerIcon}" class="bot-icon">  + formatted;
 
 
                         chatHistory.appendChild(botMessage);
