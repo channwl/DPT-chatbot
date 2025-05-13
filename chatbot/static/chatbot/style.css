@@ -16,23 +16,12 @@ body {
 }
 
 .header-flex {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* 왼쪽 정렬 */
-    padding: 20px;
-    gap: 20px;
-    border-bottom: none; /* 선 제거 */
+    padding: 30px;
 }
 
 .logo {
-    height: 70px;
-    margin-right: 16px;
-}
-
-.header-title {
-    font-size: 28px;
-    color: #800000;
-    font-weight: bold;
+    height: 90px;
+    margin-right: 0px;
 }
 
 
