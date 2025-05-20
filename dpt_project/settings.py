@@ -2,11 +2,14 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
-load_dotenv() 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-
 # 기본 경로
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# .env 경로 명시적으로 지정 (Gunicorn에서도 안정적으로 작동)
+load_dotenv(dotenv_path=BASE_DIR / ".env")
+
+# 환경 변수 불러오기
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # 보안 키 및 디버그
 SECRET_KEY = 'your-secret-key'
