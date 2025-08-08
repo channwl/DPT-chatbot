@@ -1,6 +1,6 @@
 # 📌 프로젝트 개요
 이 프로젝트는 고려대학교 세종캠퍼스 **디지털경영전공 학부생**을 위한 정보 제공 챗봇입니다. <br>
-LangChain 기반 RAG(Retrieval-Augmented Generation) 방식을 사용하여 학과 안내 PDF에서 필요한 정보를 검색·요약 <br> 하고 HTML 형식으로 제공하며, Django 웹 인터페이스를 통해 실시간 질의응답이 가능합니다.
+LangChain 기반 RAG(Retrieval-Augmented Generation) 방식을 사용하여 학과 안내 PDF에서 필요한 정보를 검색·요약하고 HTML 형식으로 제공하며, Django 웹 인터페이스를 통해 실시간 질의응답이 가능합니다.
 
 ---
 
