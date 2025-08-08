@@ -5,37 +5,39 @@ LangChain 기반 RAG(Retrieval-Augmented Generation) 방식을 사용하여 학�
 ---
 
 # 📂 프로젝트 구조
+
+# 📂 프로젝트 구조
 DPT-chatbot/
-├─ chatbot/ # Django 앱 (UI 및 RAG 로직)
-│ ├─ pycache/ # Python 캐시 파일
-│ ├─ static/chatbot/ # 정적 리소스 (CSS, JS, 이미지)
-│ │ └─ style.css # 챗봇 UI 스타일 시트
-│ ├─ templates/chatbot/ # HTML 템플릿
-│ │ └─ chatbot.html # 메인 챗봇 화면
-│ ├─ apps.py # Django 앱 설정
-│ ├─ urls.py # URL 라우팅 설정
-│ ├─ utils.py # PDF 처리, 인덱싱, RAG 시스템 구현
-│ └─ views.py # 사용자 요청 처리 및 응답 반환
+├── chatbot/                     # Django 앱 (UI 및 RAG 로직)
+│   ├── __pycache__/              # Python 캐시 파일
+│   ├── static/chatbot/           # 정적 리소스 (CSS, JS, 이미지)
+│   │   └── style.css              # 챗봇 UI 스타일 시트
+│   ├── templates/chatbot/        # HTML 템플릿
+│   │   └── chatbot.html           # 메인 챗봇 화면
+│   ├── apps.py                   # Django 앱 설정
+│   ├── urls.py                   # URL 라우팅 설정
+│   ├── utils.py                  # PDF 처리, 인덱싱, RAG 시스템 구현
+│   └── views.py                  # 사용자 요청 처리 및 응답 반환
 │
-├─ data/ # 학과 안내 PDF 보관 폴더
+├── data/                         # 학과 안내 PDF 보관 폴더
 │
-├─ dpt_env/ # 환경설정(로컬/개발용, 배포 제외)
+├── dpt_env/                      # 가상환경 또는 환경설정 폴더 (배포 제외)
 │
-├─ dpt_project/ # Django 프로젝트 설정
-│ ├─ pycache/
-│ ├─ init.py
-│ ├─ asgi.py # ASGI 설정
-│ ├─ settings.py # Django 설정 파일
-│ ├─ urls.py # 전역 URL 매핑
-│ └─ wsgi.py # WSGI 설정 (배포용)
+├── dpt_project/                  # Django 프로젝트 설정
+│   ├── __pycache__/
+│   ├── __init__.py
+│   ├── asgi.py                   # ASGI 설정
+│   ├── settings.py               # Django 설정 파일
+│   ├── urls.py                   # 전역 URL 매핑
+│   └── wsgi.py                   # WSGI 설정 (배포용)
 │
-├─ faiss_index_internal/ # FAISS 인덱스 저장 폴더
+├── faiss_index_internal/         # FAISS 인덱스 저장 폴더
 │
-├─ venv/ # Python 가상환경
+├── venv/                         # Python 가상환경
 │
-├─ .DS_Store # macOS 시스템 파일
-├─ db.sqlite3 # SQLite 데이터베이스
-├─ manage.py # Django 관리 스크립트
+├── .DS_Store                     # macOS 시스템 파일
+├── db.sqlite3                    # SQLite 데이터베이스
+└── manage.py                     # Django 관리 스크립트
 
 
 ---
