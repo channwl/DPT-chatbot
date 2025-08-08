@@ -7,17 +7,17 @@ LangChain 기반 RAG(Retrieval-Augmented Generation) 방식을 사용하여 학�
 # 📂 프로젝트 구조
 
 # 📂 프로젝트 구조
-DPT-chatbot/
-├── chatbot/                     # Django 앱 (UI 및 RAG 로직)
-│   ├── __pycache__/              # Python 캐시 파일
-│   ├── static/chatbot/           # 정적 리소스 (CSS, JS, 이미지)
-│   │   └── style.css              # 챗봇 UI 스타일 시트
-│   ├── templates/chatbot/        # HTML 템플릿
-│   │   └── chatbot.html           # 메인 챗봇 화면
-│   ├── apps.py                   # Django 앱 설정
-│   ├── urls.py                   # URL 라우팅 설정
-│   ├── utils.py                  # PDF 처리, 인덱싱, RAG 시스템 구현
-│   └── views.py                  # 사용자 요청 처리 및 응답 반환
+DPT-chatbot/ <br>
+├── chatbot/                     # Django 앱 (UI 및 RAG 로직) <br>
+│   ├── __pycache__/              # Python 캐시 파일 <br>
+│   ├── static/chatbot/           # 정적 리소스 (CSS, JS, 이미지) <br>
+│   │   └── style.css              # 챗봇 UI 스타일 시트 <br>
+│   ├── templates/chatbot/        # HTML 템플릿 <br>
+│   │   └── chatbot.html           # 메인 챗봇 화면 <br>
+│   ├── apps.py                   # Django 앱 설정 <br>
+│   ├── urls.py                   # URL 라우팅 설정 <br>
+│   ├── utils.py                  # PDF 처리, 인덱싱, RAG 시스템 구현 <br>
+│   └── views.py                  # 사용자 요청 처리 및 응답 반환 <br>
 │
 ├── data/                         # 학과 안내 PDF 보관 폴더
 │
